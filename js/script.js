@@ -7,7 +7,7 @@ console.log(infoCustomerAge)
 
 // Calcola il prezzo del biglietto per il cliente 
     // Il prezzo del biglietto è il prodotto tra  la distanza in KM e il prezzo fisso di 0.21 euro al km.
-    const totalPrice = infoCustomerKm * 0.21;
+    let totalPrice = infoCustomerKm * 0.21;
     console.log(totalPrice)
 
 
@@ -17,18 +17,20 @@ console.log(infoCustomerAge)
  if (infoCustomerAge < 18 ) {
     percentage = 0.20;
  }
- // a
+ // Applica scontro del 40% per clienti al di sopra dei 65 anni.
  else if (infoCustomerAge > 65) {
     percentage = 0.40;
  }
-// Applica scontro del 40% per clienti al di sopra dei 65 anni.
+
  const discount = percentage * totalPrice;
 
  const finalPrice = totalPrice - discount;
  
  
  console.log(finalPrice);
-// Output del costo del biglietto.  
+
+
+ // Output del costo del biglietto.  
 
 const ticketCash = `il costo del tuo biglietto è: ${finalPrice.toFixed(2)} Є`
 
